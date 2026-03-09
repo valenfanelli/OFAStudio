@@ -16,7 +16,7 @@ function Navbar() {
   }, []);
 
   const lightPages = ['/sobre-ofa', '/contacto'];
-  const isLightPage = lightPages.includes(location.pathname);
+  const isLightPage = lightPages.includes(location.pathname) || location.pathname.startsWith('/proyectos/');
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''} ${isLightPage ? 'navbar-light' : ''}`}>

@@ -1,11 +1,12 @@
+import { Link } from 'react-router-dom';
 import proyecto from '../img/proyecto.png';
 
 function Proyectos() {
   const proyectos = [
-    { titulo: 'Residenciales' },
-    { titulo: 'Comerciales' },
-    { titulo: 'Corporativos' },
-    { titulo: 'Hotelero' },
+    { titulo: 'Residenciales', slug: 'residenciales' },
+    { titulo: 'Comerciales', slug: 'comerciales' },
+    { titulo: 'Corporativos', slug: 'corporativos' },
+    { titulo: 'Hotelero', slug: 'hotelero' },
   ];
 
   return (
@@ -18,14 +19,14 @@ function Proyectos() {
 
         <div className="proyectos-grid">
           {proyectos.map((proj, index) => (
-            <div key={index} className="proyecto-card">
+            <Link key={index} to={`/proyectos/${proj.slug}`} className="proyecto-card">
               <div className="proyecto-card-img-wrapper">
                 <img src={proyecto} alt={proj.titulo} className="proyecto-card-img" />
                 <div className="proyecto-card-overlay">
                   <h3 className="proyecto-card-title">{proj.titulo}</h3>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
