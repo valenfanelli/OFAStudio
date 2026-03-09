@@ -1,0 +1,5 @@
+/* SCSS RGB */
+$shadow-grey: rgba(55, 47, 53, 1);
+$rich-mahogany: rgba(47, 19, 14, 1);
+$olive-leaf: rgba(95, 95, 54, 1);
+$charcoal-brown: rgba(49, 44, 33, 1);
